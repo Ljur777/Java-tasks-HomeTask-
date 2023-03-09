@@ -1,6 +1,8 @@
+import java.util.Arrays;
+
 public class Average {
     static int acc = 0;
-    static int[] arr2;
+    static int[] arr4;
 
     public static void main(String[] args) {
         //TODO   1.  Создать массивы типа: int, double и создать методы, для их вывода на консоль
@@ -45,8 +47,8 @@ public class Average {
         // Найти в другой функции их среднее арифметическое значение
 
 
-        print3(arr3);
-        System.out.println(average(arr3));
+     //     print3(arr3);
+     //   System.out.println(average(arr3));
 
 
         //TODO 4. Создать метод, который будет применять строку и выводить из нее только гласные буквы
@@ -73,6 +75,32 @@ public class Average {
     }
 */
 
+        //TODO 4) Перевернуть массив(реверсировать) и вывести из него все значения на нечетных позициях.
+        System.out.println(Arrays.toString(arr3));
+        int[] arr4 = reverseArr(arr3);
+        System.out.println(Arrays.toString(arr4));
+        System.out.println("******");
+        printEven(arr4);
+    }
+
+    private static void printEven(int[] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+            if(i%2 == 0) {
+                System.out.print(arr[i] + " ");
+            }
+        }
+
+    }
+
+    private static int[] reverseArr(int[] arr) {
+        int index = 0;
+        int arr2[] = new int[arr.length];
+        for (int i = arr.length-1; i >= 0; i--){
+            arr2[index] = arr[i];
+            index++;
+        }
+        return arr2;
     }
 
     public static void print3(int[] arr) {
